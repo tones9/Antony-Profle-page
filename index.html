@@ -3,50 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Animation</title>
+    <title>Antony Vishal Rajendra Prasad - Career Roadmap</title>
     <style>
+        /* Global Styling */
         body {
             margin: 0;
-            padding: 0;
-            height: 100vh;
-            background-color: blue;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
             font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            overflow-x: hidden;
         }
 
-        h1 {
-            color: yellow;
-            font-size: 50px;
-            font-weight: bold;
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .roadmap {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px 0;
             position: relative;
-            animation: moveRight 5s linear infinite, blink 1s infinite;
         }
 
-        /* Move the text to the right like a train */
-        @keyframes moveRight {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(100%);
-            }
+        .roadmap::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 5px;
+            height: 100%;
+            background-color: #1e3a8a;
+            transform: translateX(-50%);
         }
 
-        /* Blinking effect */
-        @keyframes blink {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
+        .roadmap-item {
+            width: 50%;
+            padding: 20px;
+            background-color: #e7eff6;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .roadmap-item:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        .roadmap-item::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            width: 15px;
+            height: 15px;
+            background-color: #1e3a8a;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .roadmap-item:nth-child(even)::after {
+            left: auto;
+            right: -20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e3a8a;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>IT can't be done</h1>
+    <header>
+        <h1>Antony Vishal Rajendra Prasad</h1>
+    </header>
+
+    <div class="roadmap">
+        <div class="roadmap-item">
+            <h2>Education</h2>
+            <p><strong>Masters in Business Analytics</strong> - Dublin Business School (2022 - 2024)</p>
+            <p><strong>Bachelor’s in Information Science</strong> - Visvesvaraya Technological University (2015 - 2019)</p>
+        </div>
+        
+        <div class="roadmap-item">
+            <h2>Business Analyst - Concentrix</h2>
+            <p>Feb 2019 - Sept 2022</p>
+            <ul>
+                <li>Designed and delivered scalable IT solutions.</li>
+                <li>Collaborated with stakeholders for requirements gathering.</li>
+                <li>Led UAT, process improvement, and data analysis.</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-item">
+            <h2>Technical Skills</h2>
+            <p>SQL, Python, Power BI, Excel, Azure DevOps, Jira, Confluence, Snowflake, SAP Hana</p>
+        </div>
+
+        <div class="roadmap-item">
+            <h2>Projects</h2>
+            <p><strong>Demand Sales Forecasting with Time Series and Machine Learning</strong></p>
+            <ul>
+                <li>Developed an ensemble forecasting model.</li>
+                <li>Applied 10+ machine learning models to improve predictive accuracy.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Antony Vishal Rajendra Prasad. All rights reserved.
+    </footer>
 </body>
 </html>
 
