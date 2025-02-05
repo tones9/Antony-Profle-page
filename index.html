@@ -3,24 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Can't Be Done</title>
+    <title>Text Animation</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            height: 100vh;
             background-color: blue;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
             color: yellow;
             font-size: 50px;
             font-weight: bold;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            position: relative;
+            animation: moveRight 5s linear infinite, blink 1s infinite;
+        }
+
+        /* Move the text to the right like a train */
+        @keyframes moveRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Blinking effect */
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    It  can be done baby:P
+    <h1>IT can't be done</h1>
 </body>
 </html>
+
